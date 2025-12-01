@@ -31,7 +31,7 @@ const authMiddleware = async ({ request, response }: any, next: any) => {
 }
 
 // Auth routes (public)
-router.post('/auth/register', [AuthController, 'register'])
+router.post('/auth/register', [AuthController, 'register']) //
 router.post('/auth/login', [AuthController, 'login'])
 router.post('/auth/create-admin', [AuthController, 'createAdmin'])
 router.get('/auth/profile', [AuthController, 'profile']).middleware(authMiddleware)
